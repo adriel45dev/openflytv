@@ -1,7 +1,5 @@
 # OpenFlyTV
 
-![OpenFlyTV](/public/logo.svg)
-
 <p align="center">
   <img alt="openflytv-logo" src="/public/logo.svg" width="200px" height="200px"/>
 </p>
