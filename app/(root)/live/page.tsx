@@ -18,7 +18,7 @@ import { MainLogo, PlayStreamIcon } from "@/app/shared/icons";
 import SectionView from "@/app/components/SectionView";
 import YoutubePlayer from "@/app/components/YoutubePlayer";
 import IframePlayer from "@/app/components/IframePlayer";
-// import { useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 type FilterCountryListType = CountryInfo & { state: boolean };
 
@@ -557,19 +557,19 @@ export default function Live() {
     })();
   }, [selectedChannel]);
 
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
 
-  // useEffect(() => {
-  //   const selectedCountry = searchParams?.get("country");
+  useEffect(() => {
+    const selectedCountry = searchParams?.get("country");
 
-  //   if (selectedCountry) {
-  //     const country = COUNTRY_LIST[selectedCountry as COUNTRY];
-  //     if (country) {
-  //       setChannels(CHANNEL_LIST[country.zone][country.country]);
-  //       setSelectedChannel(CHANNEL_LIST[country.zone][country.country][0]);
-  //     }
-  //   }
-  // }, []);
+    if (selectedCountry) {
+      const country = COUNTRY_LIST[selectedCountry as COUNTRY];
+      if (country) {
+        setChannels(CHANNEL_LIST[country.zone][country.country]);
+        setSelectedChannel(CHANNEL_LIST[country.zone][country.country][0]);
+      }
+    }
+  }, []);
 
   const hanldeClearFilter = () => {
     setFilterZoneList((prevZone) =>
