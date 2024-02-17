@@ -18,7 +18,6 @@ import { MainLogo, PlayStreamIcon } from "@/app/shared/icons";
 import SectionView from "@/app/components/SectionView";
 import YoutubePlayer from "@/app/components/YoutubePlayer";
 import IframePlayer from "@/app/components/IframePlayer";
-import { useSearchParams } from "next/navigation";
 
 type FilterCountryListType = CountryInfo & { state: boolean };
 
@@ -557,10 +556,9 @@ export default function Live() {
     })();
   }, [selectedChannel]);
 
-  const searchParams = useSearchParams();
-
   useEffect(() => {
-    const selectedCountry = searchParams?.get("country");
+    const searchParams = new URLSearchParams(window.location.search);
+    const selectedCountry = searchParams.get("country");
 
     if (selectedCountry) {
       const country = COUNTRY_LIST[selectedCountry as COUNTRY];
