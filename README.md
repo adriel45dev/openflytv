@@ -2,6 +2,10 @@
 
 ![OpenFlyTV](/public/logo.svg)
 
+<p align="center">
+  <img alt="openflytv-logo" src="/public/logo.svg" width="200px" height="200px"/>
+</p>
+
 Welcome to **OpenFlyTV**, your go-to streaming platform for accessing open broadcast channels from around the globe. Built with the latest web technologies, including Next.js 13, TypeScript, and TailwindCSS, OpenFlyTV offers a sleek, user-friendly experience for exploring and watching live television broadcasts. Leveraging the power of YouTube API and Next API, we provide a seamless streaming service that connects you to a world of cultural, educational, and entertainment content.
 
 ## Features
