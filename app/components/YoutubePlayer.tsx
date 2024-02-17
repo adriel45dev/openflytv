@@ -68,7 +68,7 @@ export default function YoutubePlayer({ channelId }: { channelId: string }) {
           ></iframe>
         </div>
       ) : (
-        <div className="w-full min-h-screen flex flex-col justify-center items-center py-4 px-4 sm:px-16">
+        <div className="w-full min-h-max flex flex-col justify-center items-center p-0 sm:px-16">
           <div className=" text-white text-4xl flex flex-col flex-1 justify-center items-center gap-2 py-12 px-4 bg-slate-800 w-full max-h-full rounded-lg">
             <YoutubeIcon className="w-20 h-20 py-1 rounded-lg animate-pulse text-[#CE1312]" />
             <div className="font-bold text-lg sm:text-4xl animate-pulse text-center">
