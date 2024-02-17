@@ -3,25 +3,9 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { YoutubeIcon } from "../shared/icons";
 
-async function fetchYoutubeApiLiveVideoUrl(channelId: string) {
-  try {
-    const res = await fetch(`/api/youtubeLive?channelId=${channelId}`);
-    const data = await res.json();
-    if (res.ok) {
-      return String(data.liveVideoUrl); // URL da live
-    } else {
-      console.error(data.error);
-      return "";
-    }
-  } catch (error) {
-    console.error("Erro ao buscar URL da live:", error);
-    return "";
-  }
-}
-
 async function fetchWebScraperLiveVideoUrl(channelId: string): Promise<string> {
   try {
-    const response = await fetch(`/api/youtubeStream?channelId=${channelId}`);
+    const response = await fetch(`/api/youtubeStream2?channelId=${channelId}`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

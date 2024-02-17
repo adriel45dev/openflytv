@@ -21,8 +21,11 @@ export default async function handler(
       "--disable-setuid-sandbox",
       "--disable-gpu",
       "--disable-dev-shm-usage",
+      "--hide-scrollbars",
+      "--disable-web-security",
     ], // Configurações recomendadas para execução em ambientes de produção/CI
   });
+
   const page = await browser.newPage();
 
   try {
