@@ -93,6 +93,7 @@ export default function Home() {
   const WatchNowButton = () => {
     return (
       <Link
+        aria-label="Assistir Agora"
         href={"/live"}
         className="group w-full hover:border-green-400 flex justify-center items-center bg-slate-900 rounded-lg p-2 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] border border-slate-400"
       >

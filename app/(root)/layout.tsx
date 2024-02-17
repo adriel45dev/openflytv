@@ -13,8 +13,31 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
+      type: "image/png",
+      sizes: "192x192",
+      url: "/android-chrome-192x192.png/?v=2",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "512x512",
+      url: "/android-chrome-512x512.png/?v=2",
+    },
+    {
+      rel: "shortcut icon",
+      type: "image/x-icon",
+      sizes: "512x512",
+      url: "/logo_png_512x512.png?v=2",
+    },
+    {
+      rel: "shortcut icon",
+      type: "image/x-icon",
+      url: "/myIcon.ico?v=2",
+    },
+    {
+      rel: "icon",
       type: "image/ico",
-      url: "/favicon.ico",
+      url: "/favicon.ico?v=2",
     },
     {
       rel: "icon",
