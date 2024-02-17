@@ -27,7 +27,7 @@ const getAllCountryList = () => {
   ) as CountryInfo[];
 };
 
-export default function Home({ language }: { language: string }) {
+export default function Home() {
   const InfinityScrollViewChannels = () => {
     const ListItemChannel = ({ alt, src }: { alt: string; src: string }) => {
       return (
