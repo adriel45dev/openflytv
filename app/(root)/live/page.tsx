@@ -641,16 +641,22 @@ export default function Live() {
         <div className="flex gap-2 justify-center items-center text-white flex-wrap">
           {filterCountryList
             .filter((c) => c.state)
-            .map((c) => (
-              <div className="bg-slate-700 rounded-full px-2 py-1 text-xs">
+            .map((c, i) => (
+              <div
+                className="bg-slate-700 rounded-full px-2 py-1 text-xs"
+                key={i}
+              >
                 {c.name}
               </div>
             ))}
 
           {filterZoneList
             .filter((z) => z.state)
-            .map((z) => (
-              <div className="bg-orange-500 rounded-full px-2 py-1 text-xs">
+            .map((z, i) => (
+              <div
+                className="bg-orange-500 rounded-full px-2 py-1 text-xs"
+                key={i}
+              >
                 {z.name}
               </div>
             ))}

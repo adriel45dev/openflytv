@@ -52,8 +52,12 @@ export default function Home() {
           x-ref="logos"
           className="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll"
         >
-          {getAllChannelsData().map((ch) => (
-            <ListItemChannel alt={ch.channelName} src={ch.channelLogo} />
+          {getAllChannelsData().map((ch, i) => (
+            <ListItemChannel
+              alt={ch.channelName}
+              src={ch.channelLogo}
+              key={i}
+            />
           ))}
         </ul>
       );
@@ -146,8 +150,8 @@ export default function Home() {
           TV ONLINE | TV GRÁTIS | CANAIS ABERTOS | OPENTV | FREETV | LIVE TV{" "}
         </h1>
 
-        {getAllChannelsData().map((c) => (
-          <p>{`${c.channelName.toUpperCase()} AO VIVO`}</p>
+        {getAllChannelsData().map((c, i) => (
+          <p key={i}>{`${c.channelName.toUpperCase()} AO VIVO`}</p>
         ))}
       </Head>
       <InfinityScrollViewChannels />
@@ -155,8 +159,8 @@ export default function Home() {
       <WatchNowButton />
 
       <div className="w-full  rounded-lg grid grid-cols-3 sm:grid-cols-6 justify-center items-center gap-2 p-2">
-        {getAllCountryList().map((COUNTRY) => (
-          <ContryListItem country={COUNTRY} />
+        {getAllCountryList().map((COUNTRY, i) => (
+          <ContryListItem country={COUNTRY} key={i} />
         ))}
       </div>
     </div>
