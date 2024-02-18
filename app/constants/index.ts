@@ -115,8 +115,8 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
   },
   {
     id: 4,
-    channelName: "TVBRASIL (tvguarapari)",
-    channelURL: "https://www.tvguarapari.com/",
+    channelName: "TVBRASIL",
+    channelURL: "https://play.ebc.com.br/tvs",
     channelLogo: `${CHANNEL_LOGO_PATH}/tv_brasil_svg.svg`,
 
     zone: ZONE.SOUTH_AMERICA,
@@ -124,7 +124,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
-      "https://video.wellhost.com.br:4434/tvguarapari/tvguarapari/playlist.m3u8",
+      "https://tvbrasil-stream.ebc.com.br/mux_video_ts/index-1.m3u8",
   },
   {
     id: 5,
@@ -238,6 +238,57 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC: "https://aovivo.ebc.com.br/embed-canaleducacao.html",
+  },
+  {
+    id: 14,
+    channelName: "Rede TV",
+    channelURL: "https://www.redetvgo.com.br/live/LIV-8",
+    channelLogo: `${CHANNEL_LOGO_PATH}/rede_tv_png.png`,
+
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+
+    transmissionType: TRANSMISSION_TYPE.STREAM,
+    transmissionSRC:
+      "https://dtcatf1yeq90t.cloudfront.net/out/v1/474a19630faa47908e790373efc520d9/index_1.m3u8",
+  },
+  {
+    id: 15,
+    channelName: "Canal Gov",
+    channelURL: "https://canalgov.ebc.com.br/ao-vivo",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_gov_png.png`,
+
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+
+    transmissionType: TRANSMISSION_TYPE.IFRAME,
+    transmissionSRC:
+      "https://aovivo.ebc.com.br/embed-canalgov.html?autoplay=1&v=2",
+  },
+  {
+    id: 16,
+    channelName: "Canal Libras",
+    channelURL: "https://www.gov.br/mec/pt-br/canal-libras",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_libras_br_png.png`,
+
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+
+    transmissionType: TRANSMISSION_TYPE.IFRAME,
+    transmissionSRC: "https://aovivo.ebc.com.br/embed-canallibras.html",
+  },
+  {
+    id: 17,
+    channelName: "Canal Rural",
+    channelURL: "https://www.canalrural.com.br/ao-vivo/",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_rural_br_svg.svg`,
+
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+
+    transmissionType: TRANSMISSION_TYPE.STREAM,
+    transmissionSRC:
+      "https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8",
   },
 ];
 
