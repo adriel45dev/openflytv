@@ -18,6 +18,7 @@ import { MainLogo, PlayStreamIcon } from "@/app/shared/icons";
 import SectionView from "@/app/components/SectionView";
 import YoutubePlayer from "@/app/components/YoutubePlayer";
 import IframePlayer from "@/app/components/IframePlayer";
+import VideoJSStream from "@/app/components/VideoJSStream";
 
 type FilterCountryListType = CountryInfo & { state: boolean };
 
@@ -613,7 +614,13 @@ export default function Live() {
 
         {selectedChannel.transmissionType == TRANSMISSION_TYPE.STREAM &&
           (selectedChannel.transmissionSRC ? (
-            <HLSPlayer src={selectedChannel.transmissionSRC} />
+            <>
+              <HLSPlayer
+                src={"/api/stream?url=" + selectedChannel.transmissionSRC}
+              />
+              {/* <VideoJS src={selectedChannel.transmissionSRC} /> */}
+              <VideoJSStream src={selectedChannel.transmissionSRC} />
+            </>
           ) : (
             <LoadingChannel
               channelURL={selectedChannel.channelURL}

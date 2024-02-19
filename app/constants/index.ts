@@ -290,6 +290,38 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionSRC:
       "https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8",
   },
+  {
+    id: 18,
+    channelName: "Canal Saúde",
+    channelURL: "https://www.canalsaude.fiocruz.br/canal/aoVivo/",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_saude_png.png`,
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+    transmissionType: TRANSMISSION_TYPE.IFRAME,
+    transmissionSRC: "https://zoevideos.net/player/aovivo/982?autoPlay",
+  },
+  {
+    id: 19,
+    channelName: "Canal do Boi",
+    channelURL: "https://sba1.com/aovivo/canaldoboi",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_do_boi_png.png`,
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+    transmissionType: TRANSMISSION_TYPE.STREAM,
+    transmissionSRC:
+      "https://arkyvbre1g.zoeweb.tv/fiocruz/fiocruz.stream/chunklist.m3u8?checkedby:iptvcat.com",
+  },
+  {
+    id: 20,
+    channelName: "Canal do Criador",
+    channelURL: "https://www.canaldocriador.com.br/",
+    channelLogo: `${CHANNEL_LOGO_PATH}/canal_do_criador_svg.svg`,
+    zone: ZONE.SOUTH_AMERICA,
+    country: COUNTRY.BRAZIL,
+    transmissionType: TRANSMISSION_TYPE.STREAM,
+    transmissionSRC:
+      "https://607d2a1a47b1f.streamlock.net/crur/smil:canaldocriador/playlist.m3u8",
+  },
 ];
 
 const CHANNEL_LIST_ARGENTINA: ChannelType[] = [
