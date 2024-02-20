@@ -614,13 +614,9 @@ export default function Live() {
 
         {selectedChannel.transmissionType == TRANSMISSION_TYPE.STREAM &&
           (selectedChannel.transmissionSRC ? (
-            <>
-              <HLSPlayer
-                src={"/api/stream?url=" + selectedChannel.transmissionSRC}
-              />
-              {/* <VideoJS src={selectedChannel.transmissionSRC} /> */}
-              <VideoJSStream src={selectedChannel.transmissionSRC} />
-            </>
+            <HLSPlayer
+              src={"/api/stream?url=" + selectedChannel.transmissionSRC}
+            />
           ) : (
             <LoadingChannel
               channelURL={selectedChannel.channelURL}
