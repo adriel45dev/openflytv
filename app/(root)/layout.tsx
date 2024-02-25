@@ -88,6 +88,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json?v=4" />
+        <meta name="google-adsense-account" content="ca-pub-2816167373541661" />
       </head>
 
       <body className={`${comfortaa.className} min-h-screen bg-slate-900`}>
