@@ -14,12 +14,12 @@ export default function ChannelGridSection({
 }: ChannelGradeDisplayProps) {
   return (
     <div
-      className="w-full flex flex-col justify-center items-center"
+      className="w-full flex flex-col justify-center items-center group/list"
       id="ChannelGradeDisplay"
     >
       <ul className="flex-col w-full gap-2 p-4 grid grid-cols-3 sm:grid-cols-5">
         {channels.map((c, i) => (
-          <li key={i}>
+          <li key={i} className="rounded-lg backdrop-blur-md bg-white/10	p-2">
             <Channel channel={c} searchParams={searchParams}></Channel>
           </li>
         ))}

@@ -128,7 +128,7 @@ export default function Live({ searchParams }: LiveProps) {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 min-h-screen w-full my-8">
+    <div className="flex flex-col items-center gap-4 min-h-screen w-full sm:my-8">
       <ChannelListViewSection>
         {channels?.map((channel, i) => (
           <Channel key={i} channel={channel} searchParams={searchParams} />
@@ -138,8 +138,8 @@ export default function Live({ searchParams }: LiveProps) {
 
       {channels && selectedChannel < channels?.length && (
         <>
-          <ActiveChannelLink channel={channels[selectedChannel]} />
           <PlayerDisplay channel={channels[selectedChannel]} />
+          <ActiveChannelLink channel={channels[selectedChannel]} />
           <ChannelSearchSection searchParams={searchParams} />
           <ChannelGridSection
             channels={search ? searchChannels : channels}

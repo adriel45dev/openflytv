@@ -17,6 +17,7 @@
     "zones": {
       "SOUTH_AMERICA": "South America"
     },
-    "channel_404": "This channel doesn't exist"
+    "channel_404": "This channel doesn't exist",
+    "live_label": "LIVE"
   }
 }

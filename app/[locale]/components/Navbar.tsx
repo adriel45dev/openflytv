@@ -18,14 +18,14 @@ export default function Navbar() {
   const l = useLocale();
 
   return (
-    <header className="w-full bg-slate-800 flex text-white px-6 py-4 shadow-lg shadow-salte-400">
+    <header className="w-full sm:bg-slate-800 border-b-2 border-green-400  flex text-white px-6 py-2 sm:py-4  shadow-salte-400">
       <nav className="flex justify-between items-center w-full">
         <Link
           href={"/"}
-          className="flex justify-center items-center gap-1 hover:scale-105 group text-green-400 hover:text-white"
+          className=" flex justify-center items-center gap-1 hover:scale-105 group text-green-400 hover:text-white"
         >
-          <OpenTVLogoIcon className="w-12 h-12" />
-          <h1 className="font-extrabold text-lg hidden sm:inline-block ">
+          <OpenTVLogoIcon className="sm:w-12 sm:h-12 w-10 h-10" />
+          <h1 className="font-extrabold text-lg hidden sm:inline-block">
             OpenFlyTV
           </h1>
         </Link>

@@ -17,6 +17,7 @@
     "zones": {
       "SOUTH_AMERICA": "America do Sul"
     },
-    "channel_404": "Esse canal não existe"
+    "channel_404": "Esse canal não existe",
+    "live_label": "AO VIVO"
   }
 }

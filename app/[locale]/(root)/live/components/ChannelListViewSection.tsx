@@ -28,7 +28,7 @@ export default function ChannelListViewSection({ children }: SectionViewProps) {
   };
 
   return (
-    <section className="my-6 flex h-full w-full select-none items-center justify-center gap-2 px-8">
+    <section className="my-6 hidden sm:flex h-full w-full select-none items-center justify-center gap-2 px-8">
       <BackIcon
         className="h-12 w-12 text-white hover:scale-125 hover:text-green-400"
         onClick={handlePrevious}
