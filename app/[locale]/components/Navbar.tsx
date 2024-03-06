@@ -1,10 +1,9 @@
 import React from "react";
-import { LybraryIcon, OpenTVLogoIcon, PlayStreamIcon } from "../shared/icons";
+import { OpenTVLogoIcon, PlayStreamIcon } from "../shared/icons";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import SwitchLangauge from "./SwitchLangauge";
-import { URLSearchParamsType } from "../shared/types";
 
 const ButtonMenu = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -12,7 +12,6 @@ import { URLSearchParamsType } from "@/app/[locale]/shared/types";
 import ButtonFilters from "./ButtonFilters";
 import ListFilters from "./ListFilters";
 import { FilterEnum } from "@/app/[locale]/shared/enum";
-import { Formats, RichTranslationValues, TranslationValues } from "next-intl";
 
 export default function Filters({
   searchParams,

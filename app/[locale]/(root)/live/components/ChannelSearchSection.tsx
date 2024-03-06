@@ -3,7 +3,7 @@ import SearchInput from "./SearchInput";
 import { useTranslations } from "next-intl";
 import Filters from "./Filters";
 import { URLSearchParamsType } from "@/app/[locale]/shared/types";
-import { COUNTRY, COUNTRY_LIST, ZONE_LIST } from "@/app/[locale]/constants";
+import { COUNTRY_LIST, ZONE_LIST } from "@/app/[locale]/constants";
 
 type FilterMenuProps = {
   searchParams: URLSearchParamsType;

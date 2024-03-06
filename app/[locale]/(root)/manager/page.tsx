@@ -1,9 +1,10 @@
 "use client";
-import HLSPlayer from "@/app/components/HLSPlayer";
-import IframePlayer from "@/app/components/IframePlayer";
-import YoutubePlayer from "@/app/components/YoutubePlayer";
-import { COUNTRY_LIST, ZONE_LIST } from "@/app/constants";
+
 import React, { useState } from "react";
+import { COUNTRY_LIST, ZONE_LIST } from "../../constants";
+import YoutubePlayer from "../../components/YoutubePlayer";
+import HLSPlayer from "../../components/HLSPlayer";
+import IframePlayer from "../../components/IframePlayer";
 
 type FormInputType = {
   id: string;

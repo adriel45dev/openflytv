@@ -11,19 +11,12 @@ export default function Channel({
   channel: ChannelType;
   searchParams: URLSearchParamsType;
 }) {
-  //   const selectedZone = String(searchParams.zone);
-  //   const selectedCountry = String(searchParams.country);
-  //   const selectedLanguage = searchParams.lang;
   const selectedChannel = isNaN(Number(searchParams.channel))
     ? 0
     : Number(searchParams.channel);
 
   return (
     <Link
-      // onClick={() => {
-      //   const [channelS] = channels.filter((c) => c.id == channel.id);
-      //   setSelectedChannel(channelS);
-      // }}
       href={`?${new URLSearchParams({
         ...searchParams,
         channel: String(channel.id),

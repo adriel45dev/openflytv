@@ -5,7 +5,6 @@ import Link from "next/link";
 import Head from "next/head";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { redirect } from "next/navigation";
 
 const getAllChannelsData = () => {
   type ChannelDataType = {
