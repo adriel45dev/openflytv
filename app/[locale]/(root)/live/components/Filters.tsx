@@ -46,6 +46,7 @@ export default function Filters({
       .filter((c) => c.state)
       .map((c) => c.country.toLowerCase())
       .join(";"),
+    zone: "",
   };
 
   const zoneSearchParams: URLSearchParamsType = {
@@ -53,6 +54,7 @@ export default function Filters({
       .filter((z) => z.state)
       .map((z) => z.zone.toLowerCase())
       .join(";"),
+    country: "",
   };
 
   useEffect(() => {
