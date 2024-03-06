@@ -3,12 +3,16 @@ import { OpenTVLogoIcon, PlayStreamIcon } from "../shared/icons";
 import { CHANNEL_LIST, COUNTRY_LIST, CountryInfo } from "../constants";
 import Link from "next/link";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { redirect } from "next/navigation";
 
 const getAllChannelsData = () => {
   type ChannelDataType = {
     channelName: string;
     channelLogo: string;
   };
+
   const CHANNELS_DATA: ChannelDataType[] = [];
   for (const [_, ZONE] of Object.entries(CHANNEL_LIST)) {
     for (const [_, COUNTRY] of Object.entries(ZONE)) {
@@ -28,11 +32,14 @@ const getAllCountryList = () => {
 };
 
 export default function Home() {
+  const t = useTranslations("Index");
+  const l = useLocale();
+
   const InfinityScrollViewChannels = () => {
     const ListItemChannel = ({ alt, src }: { alt: string; src: string }) => {
       return (
         <li>
-          <div className="w-12 h-12 relative overflow-hidden rounded-full opacity-90">
+          <div className="w-12 h-12 relative overflow-hidden rounded-full opacity-90 ">
             <Image
               src={src}
               alt={alt}
@@ -88,7 +95,7 @@ export default function Home() {
           <span className="text-green-400 font-extrabold">OPEN</span>FLYTV
         </h1>
         <div className="text-normal text-gray-300 animate-pulse">
-          Free TV for all
+          {t("slogan")}
         </div>
       </div>
     );
@@ -98,12 +105,12 @@ export default function Home() {
     return (
       <Link
         aria-label="Assistir Agora"
-        href={"/live"}
+        href={`${l}/live`}
         className="group w-full hover:border-green-400 flex justify-center items-center bg-slate-900 rounded-lg p-2 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] border border-slate-400"
       >
         <div className="text-white text-lg px-4 flex gap-2 justify-center items-center rounded-lg w-full">
           <PlayStreamIcon className="w-10 h-10 text-white group-hover:text-green-400" />
-          <div className="group-hover:text-green-400">Assistir Agora</div>
+          <div className="group-hover:text-green-400">{t("watch")}</div>
         </div>
       </Link>
     );
@@ -112,7 +119,7 @@ export default function Home() {
   const ContryListItem = ({ country }: { country: CountryInfo }) => {
     return (
       <Link
-        href={`/live/?country=${country.country}`}
+        href={`${l}/live/?country=${country.country.toLowerCase()}`}
         className="flex flex-col justify-center items-center w-full bg-gray-600 bg-opacity-25 p-1 rounded-lg relative hover:bg-green-500"
       >
         <Image
@@ -124,7 +131,7 @@ export default function Home() {
         />
 
         <div className=" bg-slate-600 w-full bg-opacity-20 h-full flex justify-center items-center rounded-lg">
-          <div className="text-md text-white  ">{country.name}</div>
+          <div className="text-md text-white  ">{t(country.country)}</div>
         </div>
 
         <div className="absolute -top-2 right-0 bg-blue-600 rounded-full p-1 flex justify-center items-center min-w-6 h-6">
@@ -137,7 +144,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 min-h-screen bg-slate-900 px-4">
+    <div className="flex flex-col items-center gap-4 min-h-screen bg-gray-900 px-4">
       <Head>
         <title>TV Grátis - Asisitr TV ao vivo | TV Online - OPENFLYTV</title>
         <meta

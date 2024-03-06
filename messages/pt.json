@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "slogan": "TV grátis para todos",
+    "live": "Agora na TV",
+    "watch": "Assistir",
+    "search": "Buscar",
+    "search_channels": "Buscar canais",
+    "country": "País",
+    "zone": "Região",
+    "ARGENTINA": "Argentina",
+    "BRAZIL": "Brasil",
+    "SOUTH_AMERICA": "América do Sul",
+    "countries": {
+      "ARGENTINA": "Argentina",
+      "BRAZIL": "Brasil"
+    },
+    "zones": {
+      "SOUTH_AMERICA": "America do Sul"
+    },
+    "channel_404": "Esse canal não existe"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "slogan": "Free TV for All",
+    "live": "Now on TV",
+    "watch": "Watch",
+    "search": "Search",
+    "search_channels": "Search channels",
+    "country": "Country",
+    "zone": "Zone",
+    "ARGENTINA": "Argentina",
+    "BRAZIL": "Brazil",
+    "SOUTH_AMERICA": "South America",
+    "countries": {
+      "ARGENTINA": "Argentina",
+      "BRAZIL": "Brazil"
+    },
+    "zones": {
+      "SOUTH_AMERICA": "South America"
+    },
+    "channel_404": "This channel doesn't exist"
+  }
+}

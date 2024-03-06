@@ -3,6 +3,8 @@ import { Comfortaa } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useLocale } from "next-intl";
+import { notFound } from "next/navigation";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
 
@@ -81,11 +83,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: {
+    locale: string;
+  };
 }>) {
+  const localeU = useLocale();
+
+  if (locale !== localeU) {
+    notFound();
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="manifest" href="/manifest.json?v=4" />
         <meta name="google-adsense-account" content="ca-pub-2816167373541661" />

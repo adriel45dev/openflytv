@@ -1,6 +1,10 @@
 import React from "react";
 import { LybraryIcon, OpenTVLogoIcon, PlayStreamIcon } from "../shared/icons";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import SwitchLangauge from "./SwitchLangauge";
+import { URLSearchParamsType } from "../shared/types";
 
 const ButtonMenu = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,6 +15,9 @@ const ButtonMenu = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function Navbar() {
+  const t = useTranslations("Index");
+  const l = useLocale();
+
   return (
     <header className="w-full bg-slate-800 flex text-white px-6 py-4 shadow-lg shadow-salte-400">
       <nav className="flex justify-between items-center w-full">
@@ -24,14 +31,17 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        <ul className="gap-2 hidden sm:flex">
-          <li>
-            <Link href={"/live"}>
+        <ul className="gap-2 justify-center items-center flex">
+          <li className="hidden sm:inline-block">
+            <Link href={`${l}/live`}>
               <ButtonMenu>
                 <PlayStreamIcon className="w-6 h-6" />
-                <div>Agora na TV</div>
+                <div>{t("live")}</div>
               </ButtonMenu>
             </Link>
+          </li>
+          <li>
+            <SwitchLangauge lang={l} />
           </li>
         </ul>
       </nav>

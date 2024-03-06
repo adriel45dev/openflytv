@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  .imagem-monocromatica {
+    filter: grayscale(100%) brightness(1000%);
+  }
   .player-wrapper {
     position: relative;
     padding-top: 56.25%; /* Proporção 16:9 */

@@ -7,7 +7,14 @@ export type ChannelType = {
   country: COUNTRY;
   transmissionType: TRANSMISSION_TYPE;
   transmissionSRC: string;
+  lang: LANGUAGE;
 };
+
+export enum LANGUAGE {
+  en = "en",
+  pt = "pt",
+  es = "es",
+}
 
 export enum TRANSMISSION_TYPE {
   YOUTUBE = "YOUTUBE",
@@ -76,6 +83,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     country: COUNTRY.BRAZIL,
     transmissionType: TRANSMISSION_TYPE.YOUTUBE,
     transmissionSRC: "UC-kzuB1mP2LnmaXMPniKeyg",
+    lang: LANGUAGE.pt,
   },
   {
     id: 1,
@@ -87,6 +95,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC:
       "https://geo.dailymotion.com/player/x9fev.html?video=k6H9TR1iSZWv30xaX2y&customConfig[customParams]=8804%252Fparceiros%252Fband%252Fao_vivo&customConfig[mute]=false",
+    lang: LANGUAGE.pt,
   },
   {
     id: 2,
@@ -100,6 +109,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC:
       "https://www.dailymotion.com/embed/video/k3WQuZUtEMtkX8yUtdY?autoplay=1",
+    lang: LANGUAGE.pt,
   },
   {
     id: 3,
@@ -112,6 +122,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC: "https://live.uniaoplus.com/hls/0gmf9QNc7bQ6V0Lu.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 4,
@@ -125,6 +136,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://tvbrasil-stream.ebc.com.br/mux_video_ts/index-1.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 5,
@@ -138,6 +150,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://5e837408ea907.streamlock.net:1936/1001noites/smil:1001noites.smil/playlist.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 6,
@@ -151,6 +164,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://server.flixtv.com.br/agrobrasiltv/agrobrasiltv/playlist.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 7,
@@ -163,6 +177,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC: "https://equipea.com.br/player/?canal=agrocanal",
+    lang: LANGUAGE.pt,
   },
   {
     id: 8,
@@ -175,6 +190,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://cdn.live.br1.jmvstream.com/w/LVW-8379/LVW8379_rIq6ZYiIiA/chunklist.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 9,
@@ -188,6 +204,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://cdn.live.br1.jmvstream.com/w/LVW-11668/ngrp:LVW11668_wiJpjbMrks_all/chunklist_b978000.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 10,
@@ -200,6 +217,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.YOUTUBE,
     transmissionSRC: "UCedt33latJW7StRfdF4-1FQ",
+    lang: LANGUAGE.pt,
   },
   {
     id: 11,
@@ -212,6 +230,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.YOUTUBE,
     transmissionSRC: "UCoa-D_VfMkFrCYodrOC9-mA",
+    lang: LANGUAGE.pt,
   },
   {
     id: 12,
@@ -225,6 +244,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://cdn.live.br1.jmvstream.com/w/LVW-9375/LVW9375_6i0wPBCHYc/chunklist.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 13,
@@ -238,6 +258,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC: "https://aovivo.ebc.com.br/embed-canaleducacao.html",
+    lang: LANGUAGE.pt,
   },
   {
     id: 14,
@@ -251,6 +272,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://dtcatf1yeq90t.cloudfront.net/out/v1/474a19630faa47908e790373efc520d9/index_1.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 15,
@@ -264,6 +286,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC:
       "https://aovivo.ebc.com.br/embed-canalgov.html?autoplay=1&v=2",
+    lang: LANGUAGE.pt,
   },
   {
     id: 16,
@@ -276,6 +299,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
 
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC: "https://aovivo.ebc.com.br/embed-canallibras.html",
+    lang: LANGUAGE.pt,
   },
   {
     id: 17,
@@ -289,6 +313,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8",
+    lang: LANGUAGE.pt,
   },
   {
     id: 18,
@@ -299,6 +324,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     country: COUNTRY.BRAZIL,
     transmissionType: TRANSMISSION_TYPE.IFRAME,
     transmissionSRC: "https://zoevideos.net/player/aovivo/982?autoPlay",
+    lang: LANGUAGE.pt,
   },
   {
     id: 19,
@@ -310,6 +336,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://arkyvbre1g.zoeweb.tv/fiocruz/fiocruz.stream/chunklist.m3u8?checkedby:iptvcat.com",
+    lang: LANGUAGE.pt,
   },
   {
     id: 20,
@@ -321,6 +348,7 @@ const CHANNEL_LIST_BRAZIL: ChannelType[] = [
     transmissionType: TRANSMISSION_TYPE.STREAM,
     transmissionSRC:
       "https://607d2a1a47b1f.streamlock.net/crur/smil:canaldocriador/playlist.m3u8",
+    lang: LANGUAGE.pt,
   },
 ];
 
@@ -334,6 +362,7 @@ const CHANNEL_LIST_ARGENTINA: ChannelType[] = [
     country: COUNTRY.ARGENTINA,
     transmissionType: TRANSMISSION_TYPE.YOUTUBE,
     transmissionSRC: "UCj6PcyLvpnIRT_2W_mwa9Aw",
+    lang: LANGUAGE.es,
   },
 ];
 
